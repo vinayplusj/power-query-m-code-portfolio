@@ -6,16 +6,18 @@
 
 ## Use Case
 
-The source Excel file contains multiple "Areas" (e.g., Area 1, Area 2, etc.), each with several "Branch" blocks. Each Branch includes multiple rows of metrics across ten columns. However, the format is grouped and not suitable for analysis or visualization in tools like Power BI or Excel PivotTables.
+Often, data has to be extracted from existing formats including reports formatetd for visual appeal instaed of ease of data extraction. Below is one such example.
 
 ![Initial data structure](library_transform_start.png)
+
+The source Excel file contains multiple "Areas" (e.g., Area 1, Area 2, etc.), each with several "Branch" blocks. Each Branch includes multiple rows of metrics across ten columns. However, the format is grouped and not suitable for analysis or visualization in tools like Power BI or Excel PivotTables.
 
 This script:
 - Extracts area and Branch labels
 - Flattens the matrix structure into row-based long format
 - Outputs a clean table with Area, Branch, Metric, Column (as Attribute), and Value
 
-Tall tables are prefereed in Pwoer BI as they are easier to model, scale better, and work well with Power BI’s features like slicers, visual interactions, and row-level filters. Also, tall/long tables support normalized data model (star schema)
+Tall tables are preferred in Power BI as they are easier to model, scale better, and work well with Power BI’s features like slicers, visual interactions, and row-level filters. Also, tall/long tables support normalized data model (star schema)/ The code follows the below screenshot.
 
 ![Final table preview](library_transform_result.png)
 
